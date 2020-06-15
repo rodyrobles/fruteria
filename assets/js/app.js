@@ -1,8 +1,16 @@
+//Esta si funciona
+var frutas = []; //El arrego debe estar fuera de la funcion
 function agregarFruta() {
-			var nombreFruta = document.getElementById("nuevaFruta").value; //obtiene el valor del imput
-			var item = document.createElement("li"); // crea el elemento para agregar a lista
-			var textItem = document.createTextNode(nombreFruta); //crea el nodo texto
-			item.appendChild(textItem); // adiciona el texto
-			document.getElementById("frutas").appendChild(item);
-			document.getElementById("nuevaFruta").value="";
-		}
+	var fruta, fLen, text, i; 
+	fruta= document.getElementById("fruta").value;
+	frutas.push(fruta);
+	fLen = frutas.length;
+	text = "";
+	for (i = 0; i < fLen; i++) {
+	text += "<li>" + frutas[i] + "</li>";
+	document.getElementById("lista").innerHTML = text;
+	}
+}
+
+
+
